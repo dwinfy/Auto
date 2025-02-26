@@ -2,10 +2,8 @@ name: AutomatischeAutomatisierung
 
 on:
   schedule:
-    - cron: '12 * * * *'  
-  push:
-    branches:
-      - TestBranch
+    - cron: '35 * * * *'  
+
 
 jobs:
   build:
