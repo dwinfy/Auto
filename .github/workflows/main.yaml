@@ -1,4 +1,8 @@
 name: AutomatischeAutomatisierung
+on:
+  schedules:
+    - crone: '05 * * * * '
+    run: echo 'hallo welt'
 
 on:
   push:
@@ -6,13 +10,20 @@ on:
       - TestBranch
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo "Add other commands here"
-          echo "This is a multi-line script"
+ build:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v2
+     - name: Run a one-line script
+       run: echo Hello, world!
+     - name: Run a multi-line script
+       run: |
+         echo "Add other commands here"
+         echo "This is a multi-line script"
+
+# jobs:
+#   Build:
+#     runs-on: ubuntu-latest
+#     at: "minute 5."
+#      run: |
+#        echo "Funjtioniert"
