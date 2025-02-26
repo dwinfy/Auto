@@ -1,6 +1,9 @@
 name: AutomatischeAutomatisierung
 
-on: [push]
+on:
+  push:
+    branches:
+      - TestBranch
 
 jobs:
   build:
